@@ -1,12 +1,4 @@
-const mysql = require("mysql2")
-
-const connection = mysql.createConnection({
-    host: "localhost",
-    user: "fatec",
-    port: 3000,
-    password: "P@ssword1234",
-    database: "list03"
-})
+const connection = require("./connection")
 
 function insertUser(name) {
     const query = `insert into user (user_name) values (?)`
@@ -50,9 +42,9 @@ function listUser() {
 
     connection.query(query, (err, result) => {
         if (err) {
-            console.log(err)
+            console.log("deu erro")
         } else {
-            return result[0]
+            return result
         }
     })
 }
