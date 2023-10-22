@@ -205,7 +205,7 @@
                 <div class="id"><%= user.user_id %></div>
                 <div class="name"><%= user.user_name %></div>
                 <div class="edit">
-                    <a href="#">Edit</a>
+                    <a href="/editUser/<%= user.user_id %>">Edit</a>
                 </div>
                 <div class="delete">
                     <a href="/deleteUser/<%= user.user_id %>"">Delete</a>
@@ -227,7 +227,7 @@
                     <hr>
                     <p class="comprador"><em>Comprador: <strong><%= purchase_request.user_name %></strong></em></p>
                     <div class="editDelete">
-                        <a href="#" class="edit">Edit</a>
+                        <a href="editRequest/<%= purchase_request.request_id %>" class="edit">Edit</a>
                         <a href="deleteRequest/<%= purchase_request.request_id %>" class="delete">Delete</a>
                     </div>
                 </div>
